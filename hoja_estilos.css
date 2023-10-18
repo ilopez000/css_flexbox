@@ -1,0 +1,45 @@
+/* Estils generals */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.grid {
+    display: grid;
+    gap: 10px; /* espai entre quadrats */
+}
+
+.quadrat {
+    width: 100px;
+    height: 100px;
+}
+
+.vermell { background-color: red; }
+.verd { background-color: green; }
+.blau { background-color: blue; }
+.groc { background-color: yellow; }
+
+/* Estils per a ordinadors */
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Estils per a tauletes */
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Estils per a mòbils */
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
